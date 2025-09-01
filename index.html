@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" >
+    <title>Ludo - Latest Version Of Ludo</title>
+    <link rel="shortcut icon" href="#"/>
+    <meta name="theme-color" content="#dfdfdf" />
+    <link rel="stylesheet" href="./ludo/style.css">
+</head>
+<body>
+    <table border="0" >
+        <tr>
+            <th>
+                <img src="./images/logo.svg" class="logo">
+            </th>
+        </tr>
+        <tr>
+            <th><input type="button" value="PASS N PLAY" class="playBtn" ></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="COMPUTER" class="playBtn" ></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="PLAY ONLINE" class="playBtn" ></th>
+        </tr>
+    </table>
+  
+    
+
+    <div class="tokenMenu">
+        <table border="0" height="120px"
+    width="350px">
+            <tr>
+                <th colspan="2" height="50px" width="100%">
+                    <h1>CHOOSE TOKEN</h1>
+                </th>
+            </tr>
+            <tr>
+                <th height="70px" width="50%" align="center">
+                    <div class="optionPiece">
+    
+                    <img src="./images/Rpiece(coin).svg" class="pieceOfMenu">
+                    <img src="./images/Gpiece(coin).svg" class="pieceOfMenu">
+                    <img src="./images/Bpiece(coin).svg" class="pieceOfMenu">
+                    <img src="./images/Ypiece(coin).svg" class="pieceOfMenu">
+                    </div>                    
+                </th>
+                <th height="70px" width="50%" align="center">
+                    <div class="optionPiece">
+                    <img src="./images/Rpiece(arrow).svg" class="pieceOfMenu">
+                    <img src="./images/Gpiece(arrow).svg" class="pieceOfMenu">
+                    <img src="./images/Bpiece(arrow).svg" class="pieceOfMenu">
+                    <img src="./images/Ypiece(arrow).svg" class="pieceOfMenu">
+                </div>                    
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="gameMenu">
+        <form id="form">
+        <table border="0" height="260px" width="320px">
+            <tr>
+                <th height="40px">
+                    <h3>CHOOSE COLOR AND NAME</h3>
+                </th>
+            </tr>
+            
+            <tr>
+                <th>
+                    <div class="rowPlayer">
+                    <img src="" class="pieceOfMenu">
+                    <input type="text" name="name" id="" value="Player 1" class="playerName" maxlength="10" >
+                    <img src="./images/bot.svg" class="bot">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="rowPlayer">
+                    <img src="" class="pieceOfMenu">
+                    <input type="text" name="name" id="" value="Player 2" class="playerName" maxlength="10">
+                    <img src="./images/bot.svg" class="bot">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="rowPlayer">
+                    <img src="" class="pieceOfMenu">
+                    <input type="text" name="name" id="" value="Player 3" class="playerName" maxlength="10">
+                    <img src="./images/bot.svg" class="bot">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <div class="rowPlayer">
+                    <img src="" class="pieceOfMenu">
+                    <input type="text" name="name" id="" value="Player 4" class="playerName" maxlength="10">
+                    <img src="./images/bot.svg" class="bot">
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <th height="70px">
+                    <div class="selectP">
+                    <div class="selectPlayer">2P</div>
+                    <div class="selectPlayer">3P</div>
+                    <div class="selectPlayer">4P</div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        </div>
+    </div> 
+        <input type="submit" value="Play" class="startBtn">
+        </form>
+<script src="./script.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #161623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: #fff;  
+    font-weight: bold;
+}
+.board {
+    height: 370px;
+    width: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+
+.home {
+    height: 120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redhome {
+    background-color: red;
+    border: 11px solid #b30007;
+}
+.greenhome {
+    background-color: #50ff00;
+    border: 11px solid #2a8400;
+} 
+.bluehome {
+    background-color: #2b6dff;
+    border: 11px solid #1c47a6;
+} 
+.yellowhome {
+    background-color: yellow;
+    border: 11px solid #a5aa00; 
+} 
+
+
+
+.rest {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rrest {
+    background-color: #b30007;
+}
+.grest {
+    background-color: #2a8400;
+}
+.brest {
+    background-color: #1c47a6;
+}
+.yrest {
+    background-color: #a5aa00;
+}
+
+
+
+
+.tiles {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    border: 1px solid #000;
+}
+
+.r {
+    background-color: white;
+
+}
+.rstop#stop1 {
+    background-color: #b30007;
+}
+.rstop#stop2{
+    background-color: #ffffff;
+}
+.rlast {
+    background-color: red;
+}
+.g {
+    background-color: white;
+
+}
+.gstop#stop1{
+    background-color: #2a8400;
+}
+.gstop#stop2{
+    background-color: #ffffff;
+}
+.glast {
+    background-color: #50ff00;
+}
+.b {
+    background-color: white;
+
+}
+.bstop#stop1 {
+    background-color: #1c47a6;
+}
+.bstop#stop2{
+    background-color: #ffffff;
+}
+.blast {
+    background-color: #2b6dff;
+}
+.y {
+    background-color: white;
+
+}
+.ystop#stop1 {
+    background-color: #a5aa00;
+}
+.ystop#stop2{
+    background-color: #ffffff;
+}
+.ylast {
+    background-color: yellow;
+}
+
+
+.win {
+    height: 69px;
+    width: 69px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 1px solid #000;
+}
+.winner {
+    height: 100%;
+    width: 100%;
+}
+.red {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    left: 17%;
+    
+}
+.green {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    top: 17%;
+}
+.blue {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    right: 17%;
+}
+.yellow {
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    bottom: 17%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    padding: 10px;
+}
+
+.dice {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+    display: none;
+}
+
+
+.face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: #b30007;
+    transform-style: preserve-3d;
+    
+}
+.face::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 9px;
+    height: 9px;
+    background: white;
+    color: white;
+    border-radius: 50%;
+}
+.front {
+    transform: translateZ(25px);
+}
+.back {
+    transform: rotateX(180deg) translateZ(25px);
+}
+.top {
+    transform: rotateX(90deg) translateZ(25px);
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+}
+.right {
+    transform: rotateY(90deg) translateZ(25px);
+}
+.left {
+    transform: rotateY(-90deg) translateZ(25px);
+}
+.front::after {
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+}
+.back::after {
+    margin: -20px 0 0 -14px;
+    box-shadow: 20px 0,
+    0 15px,
+    20px 15px,
+    0 30px,
+    20px 30px;
+}
+.top::after {
+    margin: -14px 0 0 -14px;
+    box-shadow: 20px 20px;
+}
+.bottom::after {
+    margin: -17px 0 0 -17px;
+    box-shadow: 13px 13px,
+    26px 26px,
+    26px 0,
+    0 26px;
+}
+.right::after {
+    margin: -17px 0 0 -17px;
+    box-shadow: 26px 0,
+    0 26px,
+    26px 26px;
+}
+.left::after {
+    margin: -17px 0 0 -17px;
+    box-shadow: 13px 13px,
+    26px 26px;
+}
+
+.displayName {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.displayName#P1 {
+    border-radius: 0 10px 10px 0;
+    right: 60px;    
+    padding-left: 20px;
+}
+.displayName#P2 {
+    border-radius: 10px 0 0 10px;
+    left: 60px;
+    padding-right: 20px;
+}
+.displayName#P4 {
+    border-radius: 0 10px 10px 0;
+    right: 60px;
+    padding-left: 20px;
+}
+.displayName#P3 {
+    border-radius: 10px 0 0 10px;
+    left: 60px;
+    padding-right: 20px;
+}
+
+.piece {
+    height: 21px;
+    width: 21px;
+    border-radius: 100%;    
+    position: absolute;
+    transition: all 0.2s;
+  /*  margin-bottom: 25px; */
+}
+
+
+
+.pieceHighlight {
+    cursor: pointer;
+    z-index: 1;
+    animation: spin 0.8s infinite linear;
+}
+@keyframes spin {
+    0% {  
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+    }        
+}
+
+
+
+.baseHighlight {
+    animation: border-blink .8s infinite ease-in-out;
+}
+
+@keyframes border-blink {
+    50% {
+        border-color: rgba(255, 255, 255, 0.8);
+        border-radius: 100%;
+    }
+}
+
+.face:disabled {
+    opacity: 0.5;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.crown {
+    height: 160px;
+    width: 160px;
+    z-index: 1;
+    position: absolute;
+}
+
+.crown[Player-id="P1"] {
+    visibility: hidden;
+}
+
+.crown[Player-id="P2"] {
+    visibility: hidden;
+}
+
+.crown[Player-id="P4"] {
+    visibility: hidden;
+}
+
+.crown[Player-id="P3"] {
+    visibility: hidden;
+}
+
+
+.playBtn {
+    height: 60px;
+    width: 350px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: #161623;
+    border-radius: 10px;
+    font-family: sans-sarif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    transition: 0.3s ease;
+}
+
+.startBtn {
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: fixed;
+    z-index: 1;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    top: 70%;
+    transform: scale(0.5);
+    transition: 0.3s ease;
+    visibility: hidden;
+    
+}
+
+.playBtn:hover {
+    color: #161623;
+    background: #ffffff;
+}
+
+.logo {
+    height: 100%;
+    width: 320px;
+    margin-bottom: 60px;
+}
+
+.tokenMenu {
+    height: 130px;
+    width: 350px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: absolute;
+    z-index: 1;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    transform: scale(0.5);
+    transition: 0.3s ease;
+    visibility: hidden;
+}
+
+.pieceOfMenu {
+    height: 30px;
+    width: 30px;
+}
+
+.optionPiece {
+    height: 50px;
+    width: 140px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.optionPiece:hover {
+    border: 0;
+    background: #fff;
+    transform: scale(1.2);
+}
+
+.gameMenu {
+    height: 260px;
+    width: 350px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    position: absolute;
+    z-index: 1;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    transform: scale(0.5);
+    transition: 0.3s ease;
+    visibility: hidden;
+}
+
+.rowPlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+}
+
+.playerName {
+    height: 25px;
+    width: 180px;
+    color: #fff;
+    padding-left: 30px;
+    margin: 15px;
+    border-radius: 15px;
+    background: transparent;
+}
+
+.playerName:hover {
+    transform: scale(1.1);
+}
+
+.bot {
+    height: 30px;
+    width: 30px;
+   /* border-radius: 50%;
+    border: 1px solid #fff;*/
+    margin-left: 10px;
+}
+
+.selectP {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.selectPlayer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.selectEffect {
+    border: 0;
+    background: #fff;
+    transform: scale(1.3);
+    color: #161623;
+}
