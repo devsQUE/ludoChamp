@@ -1,4 +1,3 @@
-import { Ludo } from './ludo/ludo.js';
-
+import { Ludo } from "./ludo/ludo.js";
 
 const ludo = new Ludo();

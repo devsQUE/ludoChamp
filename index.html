@@ -1,207 +1,301 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" >
-<title>LUDO Champ | Home </title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
-<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-<script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#6A3EFE",
-                        "background-light": "#F7F5FF",
-                    },
-                    fontFamily: {
-                        display: ["Plus Jakarta Sans", "sans-serif"]
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.5rem",
-                        lg: "1rem",
-                        xl: "1.5rem",
-                        full: "9999px"
-                    },
-                },
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
+    <title>LUDO Champ | Home</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6A3EFE",
+              "background-light": "#F7F5FF",
             },
-        }
+            fontFamily: {
+              display: ["Plus Jakarta Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        .material-symbols-outlined {
-            font-variation-settings:
-                'FILL' 0,
-                'wght' 400,
-                'GRAD' 0,
-                'opsz' 24
-        }
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
     </style>
-<style>
-    body {
-      height: 100vdh;
-    }
-        .modal-toggle:checked + .modal-backdrop {
-          display: flex;
-        }
-        .players-2-toggle:checked ~ .player-name-fields > .player-1-field,
-        .players-2-toggle:checked ~ .player-name-fields > .player-2-field {
-            display: block;
-        }
-        .players-3-toggle:checked ~ .player-name-fields > .player-1-field,
-        .players-3-toggle:checked ~ .player-name-fields > .player-2-field,
-        .players-3-toggle:checked ~ .player-name-fields > .player-3-field {
-            display: block;
-        }
-        .players-4-toggle:checked ~ .player-name-fields > .player-1-field,
-        .players-4-toggle:checked ~ .player-name-fields > .player-2-field,
-        .players-4-toggle:checked ~ .player-name-fields > .player-3-field,
-        .players-4-toggle:checked ~ .player-name-fields > .player-4-field {
-            display: block;
-        }
+    <style>
+      body {
+        height: 100vdh;
+      }
+      .modal-toggle:checked + .modal-backdrop {
+        display: flex;
+      }
+      .players-2-toggle:checked ~ .player-name-fields > .player-1-field,
+      .players-2-toggle:checked ~ .player-name-fields > .player-2-field {
+        display: block;
+      }
+      .players-3-toggle:checked ~ .player-name-fields > .player-1-field,
+      .players-3-toggle:checked ~ .player-name-fields > .player-2-field,
+      .players-3-toggle:checked ~ .player-name-fields > .player-3-field {
+        display: block;
+      }
+      .players-4-toggle:checked ~ .player-name-fields > .player-1-field,
+      .players-4-toggle:checked ~ .player-name-fields > .player-2-field,
+      .players-4-toggle:checked ~ .player-name-fields > .player-3-field,
+      .players-4-toggle:checked ~ .player-name-fields > .player-4-field {
+        display: block;
+      }
 
-        #players-2:checked ~ div label[for='players-2'] > div,
-#players-3:checked ~ div label[for='players-3'] > div,
-#players-4:checked ~ div label[for='players-4'] > div {
-    background-color: #6A3EFE; /* This is your 'primary' color */
-    color: white;
-}
-  </style>
+      #players-2:checked ~ div label[for="players-2"] > div,
+      #players-3:checked ~ div label[for="players-3"] > div,
+      #players-4:checked ~ div label[for="players-4"] > div {
+        background-color: #6a3efe;
+        color: white;
+      }
+    </style>
   </head>
-<body style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2FU9g-q1ltmomfvc_SABvz58DDGEavxU808xAdQrKzZ78N_yxhKrmfMwyuh4bR4-4Fj8XmIEp66AEKASqa6mWOQDHtAoWliW0_A8mWwKK1i3nkodQn-CBRDtBml7y4UAISgTQJZsuLhEazCvmAC6OtwRLpf8kvSfftlMSXEInafmmLTr6ij70PIQXgA9GQNvJ0dWb5dnt2quF1rbVQGmoQAdjrF03_K29dM93QujGS1kw0hB7Z9TIqzULvT-qZ_WIyiWb7d_JZmk"); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; backdrop-filter: blur(5px) '>
-<div class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden">
-<div class="flex-grow w-full max-w-md mx-auto flex flex-col ">
-<!-- <div class="flex items-center px-4 pt-4 pb-2 justify-between">
-<div class="flex items-center gap-3">
-<div class="flex size-12 shrink-0 items-center">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary" data-alt="User profile picture of a stylized cartoon character" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwXPmHQIBcg_tJ969ZMo1bdW6eaok7pbdrb8g8Bn7bkqRdSgUS0BQtsPCMW-_xBKxhn-aKaWqA6-VHik_KjRUItAVKW_0FPSpWG7Wgkcvu_nk9aQ_Qe3Y1KrPmQ8Iv6-aNRZkQyJWLvxL_u99iSeqFMwEN1UORNyRprFgbWkwY-B6Le_U6DFqkkU4uQ2JhuBgLbwQX84XWUdL6Ay5XsCQjL4yeL83D9GE70HI1kWntPl7o3jPBX1SkcsS5G66VJlcFEvLL0TOv7xM");'></div>
-</div>
-<div class="flex flex-col">
-<p class="text-sm text-white font-medium">Hello!</p>
-<p class="text-lg font-bold text-white">devsQUE</p>
-</div>
-</div>
-<div class="flex items-center gap-2">
-<div class="flex items-center gap-2 rounded-full bg-white p-2 pr-4 shadow-sm">
-<span class="material-symbols-outlined text-yellow-400 text-2xl">monetization_on</span>
-<span class="text-gray-900 font-bold text-base">1,250</span>
-</div>
-<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 w-12 bg-transparent text-white">
-<span class="material-symbols-outlined text-3xl">settings</span>
-</button>
-</div>
-</div> -->
-<div class="flex-grow flex flex-col items-center justify-center px-4">
-<!-- <h1 class="text-white tracking-light text-5xl font-bold leading-tight text-center pb-8 pt-6">Ludo Champ</h1> -->
-<div class="relative mb-8">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-48" data-alt="A stylized 3D rendering of Ludo dice and pawns" style='background-image: url("images/icon.png");'></div>
-</div>
-<div class="flex px-4 py-3 justify-center w-full max-w-sm">
-  <label for="play-modal-toggle" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-green-500 hover:bg-green-600 text-white text-xl font-bold leading-normal tracking-[0.015em] shadow-lg shadow-green-500/30 transition-transform active:scale-95">
-    <span class="truncate">PLAY NOW</span>
-  </label>
-</div>
-<div class="flex justify-center w-full max-w-sm pt-4">
-<div class="flex flex-1 gap-3 max-w-[480px] flex-col items-stretch px-4 py-3">
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-white shadow-sm text-gray-700 text-base font-bold leading-normal tracking-[0.015em] w-full hover:bg-gray-100 transition">
-<span class="truncate">Online Multiplayer</span>
-</button>
-<!-- <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-white shadow-sm text-gray-700 text-base font-bold leading-normal tracking-[0.015em] w-full hover:bg-gray-100 transition">
-<span class="truncate">Play with Friends</span>
-</button> -->
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-white shadow-sm text-gray-700 text-base font-bold leading-normal tracking-[0.015em] w-full hover:bg-gray-100 transition">
-<span class="truncate">Vs. Computer</span>
-</button>
-</div>
-</div>
-</div>
-<!-- <div class="flex-shrink-0 mt-auto">
-<div class="flex gap-2 border-t border-gray-200 bg-background-light/80 backdrop-blur-sm px-4 pb-3 pt-2">
-<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500" href="#">
-<span class="material-symbols-outlined text-3xl">leaderboard</span>
-<p class="text-xs font-medium leading-normal tracking-[0.015em]">Leaderboard</p>
-</a>
-<a class="relative flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-primary" href="#">
-<span class="absolute top-0 right-5 h-3 w-3 rounded-full bg-red-500 border-2 border-background-light"></span>
-<span class="material-symbols-outlined text-3xl">redeem</span>
-<p class="text-xs font-bold leading-normal tracking-[0.015em]">Daily Reward</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-end gap-1 text-gray-500" href="#">
-<span class="material-symbols-outlined text-3xl">storefront</span>
-<p class="text-xs font-medium leading-normal tracking-[0.015em]">Shop</p>
-</a>
-</div>
-</div> -->
-</div>
-
-<input class="hidden modal-toggle" id="play-modal-toggle" type="checkbox"/>
-<div class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-<div class="relative w-full max-w-sm rounded-xl bg-white shadow-xl p-6">
-    <label class="absolute top-2 right-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200" for="play-modal-toggle">
-        <span class="material-symbols-outlined text-xl">close</span>
-    </label>
-    
-    <div class="flex flex-col gap-5">
-        <h2 class="text-2xl font-bold text-gray-900 text-center">Set Up Your Game</h2>
-        
-        <div>
-            <label class="text-sm font-medium text-gray-600 mb-2 block">Piece Type</label>
-            <div class="grid grid-cols-2 gap-3">
-                <label class="relative cursor-pointer">
-                    <input checked="" class="peer sr-only" name="piece_type" type="radio" value="pawns" id="optionPiece" checked/>
-                    <div class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition">Pawns</div>
-                </label>
-                <label class="relative cursor-pointer">
-                    <input class="peer sr-only" name="piece_type" type="radio" value="tokens" id="optionPiece"/>
-                    <div class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition">Tokens</div>
-                </label>
+  <body
+    style="
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2FU9g-q1ltmomfvc_SABvz58DDGEavxU808xAdQrKzZ78N_yxhKrmfMwyuh4bR4-4Fj8XmIEp66AEKASqa6mWOQDHtAoWliW0_A8mWwKK1i3nkodQn-CBRDtBml7y4UAISgTQJZsuLhEazCvmAC6OtwRLpf8kvSfftlMSXEInafmmLTr6ij70PIQXgA9GQNvJ0dWb5dnt2quF1rbVQGmoQAdjrF03_K29dM93QujGS1kw0hB7Z9TIqzULvT-qZ_WIyiWb7d_JZmk');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      backdrop-filter: blur(5px);
+    "
+  >
+    <div
+      class="relative flex h-auto min-h-screen w-full flex-col font-display group/design-root overflow-x-hidden"
+    >
+      <div class="flex-grow w-full max-w-md mx-auto flex flex-col">
+        <div class="flex-grow flex flex-col items-center justify-center px-4">
+          <div class="relative mb-8">
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-48"
+              data-alt="A stylized 3D rendering of Ludo dice and pawns"
+              style="background-image: url('images/icon.png')"
+            ></div>
+          </div>
+          <div class="flex px-4 py-3 justify-center w-full max-w-sm">
+            <label
+              for="play-modal-toggle"
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 flex-1 bg-green-500 hover:bg-green-600 text-white text-xl font-bold leading-normal tracking-[0.015em] shadow-lg shadow-green-500/30 transition-transform active:scale-95"
+            >
+              <span class="truncate">PLAY NOW</span>
+            </label>
+          </div>
+          <div class="flex justify-center w-full max-w-sm pt-4">
+            <div
+              class="flex flex-1 gap-3 max-w-[480px] flex-col items-stretch px-4 py-3"
+            >
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-white shadow-sm text-gray-700 text-base font-bold leading-normal tracking-[0.015em] w-full hover:bg-gray-100 transition"
+                onclick="alert('Under Development!')"
+              >
+                <span class="truncate">Online Multiplayer</span>
+              </button>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-white shadow-sm text-gray-700 text-base font-bold leading-normal tracking-[0.015em] w-full hover:bg-gray-100 transition"
+                onclick="alert('Under Development!')"
+              >
+                <span class="truncate">Vs. Computer</span>
+              </button>
             </div>
+          </div>
         </div>
+      </div>
 
-        <input checked="" class="peer sr-only players-2-toggle" id="players-2" name="num_players" type="radio" value="2" checked/>
-        <input class="peer sr-only players-3-toggle" id="players-3" name="num_players" type="radio" value="3"/>
-        <input class="peer sr-only players-4-toggle" id="players-4" name="num_players" type="radio" value="4"/>
+      <input
+        class="hidden modal-toggle"
+        id="play-modal-toggle"
+        type="checkbox"
+      />
+      <div
+        class="modal-backdrop fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+      >
+        <div class="relative w-full max-w-sm rounded-xl bg-white shadow-xl p-6">
+          <label
+            class="absolute top-2 right-2 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200"
+            for="play-modal-toggle"
+          >
+            <span class="material-symbols-outlined text-xl">close</span>
+          </label>
 
-        <div>
-            <label class="text-sm font-medium text-gray-600 mb-2 block">Number of players</label>
-            <div class="grid grid-cols-3 gap-3">
+          <div class="flex flex-col gap-5">
+            <h2 class="text-2xl font-bold text-gray-900 text-center">
+              Set Up Your Game
+            </h2>
+
+            <div>
+              <label class="text-sm font-medium text-gray-600 mb-2 block"
+                >Piece Type</label
+              >
+              <div class="grid grid-cols-2 gap-3">
+                <label class="relative cursor-pointer">
+                  <input
+                    checked=""
+                    class="peer sr-only"
+                    name="piece_type"
+                    type="radio"
+                    value="pawns"
+                    id="optionPiece"
+                    checked
+                  />
+                  <div
+                    class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition"
+                  >
+                    Pawns
+                  </div>
+                </label>
+                <label class="relative cursor-pointer">
+                  <input
+                    class="peer sr-only"
+                    name="piece_type"
+                    type="radio"
+                    value="tokens"
+                    id="optionPiece"
+                  />
+                  <div
+                    class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition"
+                  >
+                    Tokens
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <input
+              checked=""
+              class="peer sr-only players-2-toggle"
+              id="players-2"
+              name="num_players"
+              type="radio"
+              value="2"
+              checked
+            />
+            <input
+              class="peer sr-only players-3-toggle"
+              id="players-3"
+              name="num_players"
+              type="radio"
+              value="3"
+            />
+            <input
+              class="peer sr-only players-4-toggle"
+              id="players-4"
+              name="num_players"
+              type="radio"
+              value="4"
+            />
+
+            <div>
+              <label class="text-sm font-medium text-gray-600 mb-2 block"
+                >Number of players</label
+              >
+              <div class="grid grid-cols-3 gap-3">
                 <label class="relative cursor-pointer" for="players-2">
-                    <div class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition">2 Players</div>
+                  <div
+                    class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition"
+                  >
+                    2 Players
+                  </div>
                 </label>
                 <label class="relative cursor-pointer" for="players-3">
-                    <div class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition">3 Players</div>
+                  <div
+                    class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition"
+                  >
+                    3 Players
+                  </div>
                 </label>
                 <label class="relative cursor-pointer" for="players-4">
-                    <div class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition">4 Players</div>
+                  <div
+                    class="flex items-center justify-center h-12 rounded-lg bg-gray-100 peer-checked:bg-primary peer-checked:text-white text-gray-700 font-bold transition"
+                  >
+                    4 Players
+                  </div>
                 </label>
+              </div>
             </div>
-        </div>
 
-        <div class="player-name-fields space-y-3">
-            <div class="player-1-field hidden">
-                <label class="text-sm font-medium text-gray-600 mb-2 block" for="player_name_1">Players Name</label>
-                <input class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition" id="player_name_1" placeholder="Enter name" type="text" value="Player 1" maxlength="10"/>
+            <div class="player-name-fields space-y-3">
+              <div class="player-1-field hidden">
+                <label
+                  class="text-sm font-medium text-gray-600 mb-2 block"
+                  for="player_name_1"
+                  >Players Name</label
+                >
+                <input
+                  class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition"
+                  id="player_name_1"
+                  placeholder="Enter name"
+                  type="text"
+                  value="Player 1"
+                  maxlength="10"
+                />
+              </div>
+              <div class="player-2-field hidden">
+                <input
+                  class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition"
+                  id="player_name_2"
+                  placeholder="Enter name"
+                  type="text"
+                  value="Player 2"
+                  maxlength="10"
+                />
+              </div>
+              <div class="player-3-field hidden">
+                <input
+                  class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition"
+                  id="player_name_3"
+                  placeholder="Enter name"
+                  type="text"
+                  value="Player 3"
+                  maxlength="10"
+                />
+              </div>
+              <div class="player-4-field hidden">
+                <input
+                  class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition"
+                  id="player_name_4"
+                  placeholder="Enter name"
+                  type="text"
+                  value="Player 4"
+                  maxlength="10"
+                />
+              </div>
             </div>
-            <div class="player-2-field hidden">
-                <!-- <label class="text-sm font-medium text-gray-600 mb-2 block" for="player_name_2">Player 2 Name</label> -->
-                <input class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition" id="player_name_2" placeholder="Enter name" type="text" value="Player 2" maxlength="10"/>
-            </div>
-            <div class="player-3-field hidden">
-                <!-- <label class="text-sm font-medium text-gray-600 mb-2 block" for="player_name_3">Player 3 Name</label> -->
-                <input class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition" id="player_name_3" placeholder="Enter name" type="text" value="Player 3" maxlength="10"/>
-            </div>
-            <div class="player-4-field hidden">
-                <!-- <label class="text-sm font-medium text-gray-600 mb-2 block" for="player_name_4">Player 4 Name</label> -->
-                <input class="w-full rounded-lg border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary/50 transition" id="player_name_4" placeholder="Enter name" type="text" value="Player 4" maxlength="10"/>
-            </div>
+
+            <label
+              class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary hover:bg-primary/90 text-white text-lg font-bold leading-normal tracking-[0.015em] transition-transform active:scale-95"
+              for="play-modal-toggle"
+              id="playBtn"
+            >
+              <span class="truncate">Confirm</span>
+            </label>
+          </div>
         </div>
-        
-        <label class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary hover:bg-primary/90 text-white text-lg font-bold leading-normal tracking-[0.015em] transition-transform active:scale-95" for="play-modal-toggle" id="playBtn">
-            <span class="truncate">Confirm</span>
-        </label>
+      </div>
     </div>
-    </div>
-</div>
-</div>
-<script src="script.js"></script>
-</body></html>
+    <script src="script.js"></script>
+  </body>
+</html>

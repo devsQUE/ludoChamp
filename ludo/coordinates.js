@@ -3,18 +3,15 @@ const rstop = document.querySelectorAll(".rstop");
 const rlast = document.querySelectorAll(".rlast");
 const rrest = document.querySelectorAll(".rrest");
 
-
 const g = document.querySelectorAll(".g");
 const gstop = document.querySelectorAll(".gstop");
 const glast = document.querySelectorAll(".glast");
 const grest = document.querySelectorAll(".grest");
 
-
 const b = document.querySelectorAll(".b");
 const bstop = document.querySelectorAll(".bstop");
 const blast = document.querySelectorAll(".blast");
 const brest = document.querySelectorAll(".brest");
-
 
 const y = document.querySelectorAll(".y");
 const ystop = document.querySelectorAll(".ystop");
@@ -26,7 +23,6 @@ const green = document.querySelector(".green");
 const blue = document.querySelector(".blue");
 const yellow = document.querySelector(".yellow");
 const winner = [red, green, blue, yellow];
-
 
 const coor0 = rstop[0];
 const coor1 = r[1];
@@ -133,157 +129,155 @@ const coor801 = yrest[1];
 const coor802 = yrest[2];
 const coor803 = yrest[3];
 
-
-
 export const COORDINATES_MAP = {
-0: coor0,
-1: coor1,
-2: coor2,
-3: coor3,
-4: coor4,
-5: coor5,
-6: coor6,
-7: coor7,
-8: coor8,
-9: coor9,
-10: coor10,
-11: coor11,
-12: coor12,
-13: coor13,
-14: coor14,
-15: coor15,
-16: coor16,
-17: coor17,
-18: coor18,
-19: coor19,
-20: coor20,
-21: coor21,
-22: coor22,
-23: coor23,
-24: coor24,
-25: coor25,
-26: coor26,
-27: coor27,
-28: coor28,
-29: coor29,
-30: coor30,
-31: coor31,
-32: coor32,
-33: coor33,
-34: coor34,
-35: coor35,
-36: coor36,
-37: coor37,
-38: coor38,
-39: coor39,
-40: coor40,
-41: coor41,
-42: coor42,
-43: coor43,
-44: coor44,
-45: coor45,
-46: coor46,
-47: coor47,
-48: coor48,
-49: coor49,
-50: coor50,
-51: coor51,
+  0: coor0,
+  1: coor1,
+  2: coor2,
+  3: coor3,
+  4: coor4,
+  5: coor5,
+  6: coor6,
+  7: coor7,
+  8: coor8,
+  9: coor9,
+  10: coor10,
+  11: coor11,
+  12: coor12,
+  13: coor13,
+  14: coor14,
+  15: coor15,
+  16: coor16,
+  17: coor17,
+  18: coor18,
+  19: coor19,
+  20: coor20,
+  21: coor21,
+  22: coor22,
+  23: coor23,
+  24: coor24,
+  25: coor25,
+  26: coor26,
+  27: coor27,
+  28: coor28,
+  29: coor29,
+  30: coor30,
+  31: coor31,
+  32: coor32,
+  33: coor33,
+  34: coor34,
+  35: coor35,
+  36: coor36,
+  37: coor37,
+  38: coor38,
+  39: coor39,
+  40: coor40,
+  41: coor41,
+  42: coor42,
+  43: coor43,
+  44: coor44,
+  45: coor45,
+  46: coor46,
+  47: coor47,
+  48: coor48,
+  49: coor49,
+  50: coor50,
+  51: coor51,
 
-// HOME ENTRANCE
-// P1
-100: coor100,
-101: coor101,
-102: coor102,
-103: coor103,
-104: coor104,
-105: coor105,
-// P2
-200: coor200,
-201: coor201,
-202: coor202,
-203: coor203,
-204: coor204,
-205: coor205,
-// P3
-300: coor300,
-301: coor301,
-302: coor302,
-303: coor303,
-304: coor304,
-305: coor305,
-// P4
-400: coor400,
-401: coor401,
-402: coor402,
-403: coor403,
-404: coor404,
-405: coor405,
+  // HOME ENTRANCE
+  // P1
+  100: coor100,
+  101: coor101,
+  102: coor102,
+  103: coor103,
+  104: coor104,
+  105: coor105,
+  // P2
+  200: coor200,
+  201: coor201,
+  202: coor202,
+  203: coor203,
+  204: coor204,
+  205: coor205,
+  // P3
+  300: coor300,
+  301: coor301,
+  302: coor302,
+  303: coor303,
+  304: coor304,
+  305: coor305,
+  // P4
+  400: coor400,
+  401: coor401,
+  402: coor402,
+  403: coor403,
+  404: coor404,
+  405: coor405,
 
-// BASE POSITIONS
-// P1
-500: coor500,
-501: coor501,
-502: coor502,
-503: coor503,
-// P2
-600: coor600,
-601: coor601,
-602: coor602,
-603: coor603,
-// P3
-700: coor700,
-701: coor701,
-702: coor702,
-703: coor703,
-// P4
-800: coor800,
-801: coor801,
-802: coor802,
-803: coor803,
+  // BASE POSITIONS
+  // P1
+  500: coor500,
+  501: coor501,
+  502: coor502,
+  503: coor503,
+  // P2
+  600: coor600,
+  601: coor601,
+  602: coor602,
+  603: coor603,
+  // P3
+  700: coor700,
+  701: coor701,
+  702: coor702,
+  703: coor703,
+  // P4
+  800: coor800,
+  801: coor801,
+  802: coor802,
+  803: coor803,
 };
 
-export const PLAYERS = ['Nobody'];
+export const PLAYERS = ["Nobody"];
 
-export const WIN = ['NoWinner'];
+export const WIN = ["NoWinner"];
 
 export const BASE_POSITIONS = {
-P1: [500, 501, 502, 503],
-P2: [600, 601, 602, 603],
-P3: [700, 701, 702, 703],
-P4: [800, 801, 802, 803]
+  P1: [500, 501, 502, 503],
+  P2: [600, 601, 602, 603],
+  P3: [700, 701, 702, 703],
+  P4: [800, 801, 802, 803],
 };
 
 export const START_POSITIONS = {
-P1: 0,
-P2: 13,
-P3: 26,
-P4: 39
+  P1: 0,
+  P2: 13,
+  P3: 26,
+  P4: 39,
 };
 
 export const HOME_ENTRANCE = {
-P1: [100, 101, 102, 103, 104],
-P2: [200, 201, 202, 203, 204],
-P3: [300, 301, 302, 303, 304],
-P4: [400, 401, 402, 403, 404]
+  P1: [100, 101, 102, 103, 104],
+  P2: [200, 201, 202, 203, 204],
+  P3: [300, 301, 302, 303, 304],
+  P4: [400, 401, 402, 403, 404],
 };
 
 export const HOME_POSITIONS = {
-P1: 105,
-P2: 205,
-P3: 305,
-P4: 405
+  P1: 105,
+  P2: 205,
+  P3: 305,
+  P4: 405,
 };
 
 export const TURNING_POINTS = {
-P1: 50,
-P2: 11,
-P3: 24,
-P4: 37
+  P1: 50,
+  P2: 11,
+  P3: 24,
+  P4: 37,
 };
 
 export const SAFE_POSITIONS = [0, 8, 13, 21, 26, 34, 39, 47];
 
 export const STATE = {
-DICE_NOT_ROLLED: 'DICE_NOT_ROLLED',
-DICE_ROLLED: 'DICE_ROLLED'
+  DICE_NOT_ROLLED: "DICE_NOT_ROLLED",
+  DICE_ROLLED: "DICE_ROLLED",
 };

@@ -1,325 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" >
-    <title>LUDO Champ | Board </title>
-    <link rel="stylesheet" href="./ludo/style.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-</head>
-<body style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2FU9g-q1ltmomfvc_SABvz58DDGEavxU808xAdQrKzZ78N_yxhKrmfMwyuh4bR4-4Fj8XmIEp66AEKASqa6mWOQDHtAoWliW0_A8mWwKK1i3nkodQn-CBRDtBml7y4UAISgTQJZsuLhEazCvmAC6OtwRLpf8kvSfftlMSXEInafmmLTr6ij70PIQXgA9GQNvJ0dWb5dnt2quF1rbVQGmoQAdjrF03_K29dM93QujGS1kw0hB7Z9TIqzULvT-qZ_WIyiWb7d_JZmk"); background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed; backdrop-filter: blur(5px) '>
-<table>
-<tr>
-            <th align="left">
-    <div class="container" player-id="P1">
-        <div class="dice">
-            <div class="face front"></div>
-            <div class="face back"></div>
-            <div class="face top"></div>
-            <div class="face bottom"></div>
-            <div class="face right"></div>
-            <div class="face left"></div>
-        </div>
-    </div>
-            </th>
-            <th align="center">
-                <div class="displayName" id="P1">
-                <h5 id="nameDisplay"></h5>
-                </div>
-                <div class="displayName" id="P2">
-                <h5 id="nameDisplay"></h5>
-                </div>
-            </th>
-            <th align="right">
-    <div class="container" player-id="P2">
-        
-    </div>
-            </th>
-</tr>
-<tr>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=no"
+    />
+    <title>LUDO Champ | Board</title>
+    <link rel="stylesheet" href="./ludo/style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    style="
+      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2FU9g-q1ltmomfvc_SABvz58DDGEavxU808xAdQrKzZ78N_yxhKrmfMwyuh4bR4-4Fj8XmIEp66AEKASqa6mWOQDHtAoWliW0_A8mWwKK1i3nkodQn-CBRDtBml7y4UAISgTQJZsuLhEazCvmAC6OtwRLpf8kvSfftlMSXEInafmmLTr6ij70PIQXgA9GQNvJ0dWb5dnt2quF1rbVQGmoQAdjrF03_K29dM93QujGS1kw0hB7Z9TIqzULvT-qZ_WIyiWb7d_JZmk');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      backdrop-filter: blur(5px);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    "
+  >
+    <table>
+      <tr>
+        <th align="left">
+          <div class="container" player-id="P1">
+            <div class="dice">
+              <div class="face front"></div>
+              <div class="face back"></div>
+              <div class="face top"></div>
+              <div class="face bottom"></div>
+              <div class="face right"></div>
+              <div class="face left"></div>
+            </div>
+          </div>
+        </th>
+        <th align="center">
+          <div class="displayName" id="P1">
+            <h5 id="nameDisplay"></h5>
+          </div>
+          <div class="displayName" id="P2">
+            <h5 id="nameDisplay"></h5>
+          </div>
+        </th>
+        <th align="right">
+          <div class="container" player-id="P2"></div>
+        </th>
+      </tr>
+      <tr>
         <th colspan="3">
-    <div class="board">
-<table border="0" cellpadding="20">
-    <tr>
-        <th align="right" rowspan="6" colspan="6">
-<div class="home redhome" player-id="P1">
-    <table border="0" cellpadding="0">
-    <tr>
-        <th>
-            <div class="rest rrest">
-                <img src="" class="piece rpiece" player-id="P1" piece="0">
-            </div>
-        </th>
-        <th>
-            <div class="rest rrest">
-                <img src="" class="piece rpiece" player-id="P1" piece="1">
-            </div>
-        </th>
-    </tr>
-    <tr>
-        <th>
-            <div class="rest rrest">
-                <img src="" class="piece rpiece" player-id="P1" piece="2">
-            </div>
-        </th>
-        <th>
-            <div class="rest rrest">
-                <img src="" class="piece rpiece" player-id="P1" piece="3">
-            </div>
-        </th>    
-    </tr>
-    </table>
-    <img src="" class="crown" player-id="P1">
-</div>
-        </th>
-        <th><div class="tiles g"></div></th>
-        <th><div class="tiles g"></div></th>
-        <th><div class="tiles g"></div></th>
-        <th align="left" rowspan="6" colspan="6">
-<div class="home greenhome" player-id="P2">
-    <table border="0" cellpadding="0">
-    <tr>
-        <th>
-            <div class="rest grest">
-                <img src="" class="piece gpiece" player-id="P2" piece="0">
-            </div>
-        </th>
-        <th>
-            <div class="rest grest">
-                <img src="" class="piece gpiece" player-id="P2" piece="1">
-            </div>
-        </th>
-    </tr>
-    <tr>
-        <th>
-            <div class="rest grest">
-                <img src="" class="piece gpiece" player-id="P2" piece="2">
-            </div>
-        </th>
-        <th>
-            <div class="rest grest">
-                <img src="" class="piece gpiece" player-id="P2" piece="3">
-            </div>
-        </th>
-    </tr>
-    </table>
-    <img src="" class="crown" player-id="P2">
-</div>
-        </th>
-    </tr>
+          <div class="board">
+            <table border="0" cellpadding="20">
+              <tr>
+                <th align="right" rowspan="6" colspan="6">
+                  <div class="home redhome" player-id="P1">
+                    <table border="0" cellpadding="0">
+                      <tr>
+                        <th>
+                          <div class="rest rrest">
+                            <img
+                              src=""
+                              class="piece rpiece"
+                              player-id="P1"
+                              piece="0"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest rrest">
+                            <img
+                              src=""
+                              class="piece rpiece"
+                              player-id="P1"
+                              piece="1"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div class="rest rrest">
+                            <img
+                              src=""
+                              class="piece rpiece"
+                              player-id="P1"
+                              piece="2"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest rrest">
+                            <img
+                              src=""
+                              class="piece rpiece"
+                              player-id="P1"
+                              piece="3"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                    </table>
+                    <img src="" class="crown" player-id="P1" />
+                  </div>
+                </th>
+                <th><div class="tiles g"></div></th>
+                <th><div class="tiles g"></div></th>
+                <th><div class="tiles g"></div></th>
+                <th align="left" rowspan="6" colspan="6">
+                  <div class="home greenhome" player-id="P2">
+                    <table border="0" cellpadding="0">
+                      <tr>
+                        <th>
+                          <div class="rest grest">
+                            <img
+                              src=""
+                              class="piece gpiece"
+                              player-id="P2"
+                              piece="0"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest grest">
+                            <img
+                              src=""
+                              class="piece gpiece"
+                              player-id="P2"
+                              piece="1"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div class="rest grest">
+                            <img
+                              src=""
+                              class="piece gpiece"
+                              player-id="P2"
+                              piece="2"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest grest">
+                            <img
+                              src=""
+                              class="piece gpiece"
+                              player-id="P2"
+                              piece="3"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                    </table>
+                    <img src="" class="crown" player-id="P2" />
+                  </div>
+                </th>
+              </tr>
 
-    <tr>
-        <th><div class="tiles g"></div></th>
-        <th><div class="tiles glast"></div></th>
-        <th><div class="tiles gstop" id="stop1"><svg width="20" height="20">
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:white;" />
-</svg></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles gstop" id="stop2"><svg width="20" height="20">
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:#2a8400;" />
-</svg></div></th>
-        <th><div class="tiles glast"></div></th>
-        <th><div class="tiles g"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles g"></div></th>
-        <th><div class="tiles glast"></div></th>
-        <th><div class="tiles g"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles g"></div></th>
-        <th><div class="tiles glast"></div></th>
-        <th><div class="tiles g"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles g"></div></th>
-        <th><div class="tiles glast"></div></th>
-        <th><div class="tiles g"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles rstop" id="stop1"><svg width="20" height="20">
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:white;" />
-</svg></div></th>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles r"></div></th>
-        
-        <th align="center" rowspan="3" colspan="3">
-     <div class="win">
-         <img src="./images/Home.svg" class="winner">
-         <div class="red"></div>
-         <div class="green"></div>
-         <div class="blue"></div>
-         <div class="yellow"></div>
-     </div>         
-        </th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles bstop" id="stop2"><svg width="20" height="20">
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:#1c47a6;" />
-</svg></div></th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles b"></div></th>    </tr>
-    <tr>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles rlast"></div></th>
-        <th><div class="tiles rlast"></div></th>
-        <th><div class="tiles rlast"></div></th>
-        <th><div class="tiles rlast"></div></th>
-        <th><div class="tiles rlast"></div></th>
+              <tr>
+                <th><div class="tiles g"></div></th>
+                <th><div class="tiles glast"></div></th>
+                <th>
+                  <div class="tiles gstop" id="stop1">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: white"
+                      />
+                    </svg>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <div class="tiles gstop" id="stop2">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: #2a8400"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th><div class="tiles glast"></div></th>
+                <th><div class="tiles g"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles g"></div></th>
+                <th><div class="tiles glast"></div></th>
+                <th><div class="tiles g"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles g"></div></th>
+                <th><div class="tiles glast"></div></th>
+                <th><div class="tiles g"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles g"></div></th>
+                <th><div class="tiles glast"></div></th>
+                <th><div class="tiles g"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles r"></div></th>
+                <th>
+                  <div class="tiles rstop" id="stop1">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: white"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles r"></div></th>
 
-        
-        <th><div class="tiles blast"></div></th>
-        <th><div class="tiles blast"></div></th>
-        <th><div class="tiles blast"></div></th>
-        <th><div class="tiles blast"></div></th>
-        <th><div class="tiles blast"></div></th>
-        <th><div class="tiles b"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles rstop" id="stop2"><svg width="20" height="20">
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:#b30007;" />
-</svg></div></th>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles r"></div></th>
-        <th><div class="tiles r"></div></th>
-        
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles b"></div></th>
-        <th><div class="tiles bstop" id="stop1"><svg width="20" height="20">
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:white;" />
-</svg></div></th>
-        <th><div class="tiles b"></div></th>
-    </tr>
-    <tr>
-        <th align="right" rowspan="6" colspan="6">
-<div class="home yellowhome" player-id="P4">
-    <table border="0" cellpadding="0">
-    <tr>
-        <th>
-            <div class="rest yrest">
-                <img src="" class="piece ypiece" player-id="P4" piece="0">
-            </div>
+                <th align="center" rowspan="3" colspan="3">
+                  <div class="win">
+                    <img src="./images/Home.svg" class="winner" />
+                    <div class="red"></div>
+                    <div class="green"></div>
+                    <div class="blue"></div>
+                    <div class="yellow"></div>
+                  </div>
+                </th>
+                <th><div class="tiles b"></div></th>
+                <th><div class="tiles b"></div></th>
+                <th><div class="tiles b"></div></th>
+                <th>
+                  <div class="tiles bstop" id="stop2">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: #1c47a6"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th><div class="tiles b"></div></th>
+                <th><div class="tiles b"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles rlast"></div></th>
+                <th><div class="tiles rlast"></div></th>
+                <th><div class="tiles rlast"></div></th>
+                <th><div class="tiles rlast"></div></th>
+                <th><div class="tiles rlast"></div></th>
+
+                <th><div class="tiles blast"></div></th>
+                <th><div class="tiles blast"></div></th>
+                <th><div class="tiles blast"></div></th>
+                <th><div class="tiles blast"></div></th>
+                <th><div class="tiles blast"></div></th>
+                <th><div class="tiles b"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles r"></div></th>
+                <th>
+                  <div class="tiles rstop" id="stop2">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: #b30007"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles r"></div></th>
+                <th><div class="tiles r"></div></th>
+
+                <th><div class="tiles b"></div></th>
+                <th><div class="tiles b"></div></th>
+                <th><div class="tiles b"></div></th>
+                <th><div class="tiles b"></div></th>
+                <th>
+                  <div class="tiles bstop" id="stop1">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: white"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th><div class="tiles b"></div></th>
+              </tr>
+              <tr>
+                <th align="right" rowspan="6" colspan="6">
+                  <div class="home yellowhome" player-id="P4">
+                    <table border="0" cellpadding="0">
+                      <tr>
+                        <th>
+                          <div class="rest yrest">
+                            <img
+                              src=""
+                              class="piece ypiece"
+                              player-id="P4"
+                              piece="0"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest yrest">
+                            <img
+                              src=""
+                              class="piece ypiece"
+                              player-id="P4"
+                              piece="1"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div class="rest yrest">
+                            <img
+                              src=""
+                              class="piece ypiece"
+                              player-id="P4"
+                              piece="2"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest yrest">
+                            <img
+                              src=""
+                              class="piece ypiece"
+                              player-id="P4"
+                              piece="3"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                    </table>
+                    <img src="" class="crown" player-id="P4" />
+                  </div>
+                </th>
+                <th><div class="tiles y"></div></th>
+                <th><div class="tiles ylast"></div></th>
+                <th><div class="tiles y"></div></th>
+                <th align="left" rowspan="6" colspan="6">
+                  <div class="home bluehome" player-id="P3">
+                    <table border="0" cellpadding="0">
+                      <tr>
+                        <th>
+                          <div class="rest brest">
+                            <img
+                              src=""
+                              class="piece bpiece"
+                              player-id="P3"
+                              piece="0"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest brest">
+                            <img
+                              src=""
+                              class="piece bpiece"
+                              player-id="P3"
+                              piece="1"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th>
+                          <div class="rest brest">
+                            <img
+                              src=""
+                              class="piece bpiece"
+                              player-id="P3"
+                              piece="2"
+                            />
+                          </div>
+                        </th>
+                        <th>
+                          <div class="rest brest">
+                            <img
+                              src=""
+                              class="piece bpiece"
+                              player-id="P3"
+                              piece="3"
+                            />
+                          </div>
+                        </th>
+                      </tr>
+                    </table>
+                    <img src="" class="crown" player-id="P3" />
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th><div class="tiles y"></div></th>
+                <th><div class="tiles ylast"></div></th>
+                <th><div class="tiles y"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles y"></div></th>
+                <th><div class="tiles ylast"></div></th>
+                <th><div class="tiles y"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles y"></div></th>
+                <th><div class="tiles ylast"></div></th>
+                <th>
+                  <div class="tiles ystop" id="stop2">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: #a5aa00"
+                      />
+                    </svg>
+                  </div>
+                </th>
+              </tr>
+              <tr>
+                <th>
+                  <div class="tiles ystop" id="stop1">
+                    <svg width="20" height="20">
+                      <polygon
+                        points="10,1 4,19 19,8 1,8 16,19"
+                        style="fill: white"
+                      />
+                    </svg>
+                  </div>
+                </th>
+                <th><div class="tiles ylast"></div></th>
+                <th><div class="tiles y"></div></th>
+              </tr>
+              <tr>
+                <th><div class="tiles y"></div></th>
+                <th><div class="tiles y"></div></th>
+                <th><div class="tiles y"></div></th>
+              </tr>
+            </table>
+          </div>
         </th>
-        <th>
-            <div class="rest yrest">
-                <img src="" class="piece ypiece" player-id="P4" piece="1">
-            </div>
+      </tr>
+      <tr>
+        <th align="left">
+          <div class="container" player-id="P4"></div>
         </th>
-    </tr>
-    <tr>
-        <th>
-            <div class="rest yrest">
-                <img src="" class="piece ypiece" player-id="P4" piece="2">
-            </div>
+        <th align="center">
+          <div class="displayName" id="P4">
+            <h5 id="nameDisplay"></h5>
+          </div>
+          <div class="displayName" id="P3">
+            <h5 id="nameDisplay"></h5>
+          </div>
         </th>
-        <th>
-            <div class="rest yrest">
-                <img src="" class="piece ypiece" player-id="P4" piece="3">
-            </div>
+        <th align="right">
+          <div class="container" player-id="P3"></div>
         </th>
-    </tr>
+      </tr>
     </table>
-    <img src="" class="crown" player-id="P4">
-</div>
-                            </th>
-        <th><div class="tiles y"></div></th>
-        <th><div class="tiles ylast"></div></th>
-        <th><div class="tiles y"></div></th>
-        <th align="left" rowspan="6" colspan="6">
-<div class="home bluehome" player-id="P3">
-    <table border="0" cellpadding="0">
-    <tr>
-        <th>
-            <div class="rest brest">
-                <img src="" class="piece bpiece" player-id="P3" piece="0">
-            </div>
-        </th>
-        <th>
-            <div class="rest brest">
-                <img src="" class="piece bpiece" player-id="P3" piece="1">
-            </div>
-        </th>
-    </tr>
-    <tr>
-        <th>
-            <div class="rest brest">
-                <img src="" class="piece bpiece" player-id="P3" piece="2">
-            </div>
-        </th>
-        <th>
-            <div class="rest brest">
-                <img src="" class="piece bpiece" player-id="P3" piece="3">
-            </div>
-        </th>
-    </tr>
-    </table>
-    <img src="" class="crown" player-id="P3">
-</div>
-                            </th>
-    </tr>
-    <tr>
-        <th><div class="tiles y"></div></th>
-        <th><div class="tiles ylast"></div></th>
-        <th><div class="tiles y"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles y"></div></th>
-        <th><div class="tiles ylast"></div></th>
-        <th><div class="tiles y"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles y"></div></th>
-        <th><div class="tiles ylast"></div></th>
-        <th><div class="tiles ystop" id="stop2"><svg width="20" height="20" >
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:#a5aa00;" />
-</svg></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles ystop" id="stop1"><svg width="20" height="20" >
-  <polygon points="10,1 4,19 19,8 1,8 16,19" style="fill:white;" />
-</svg></div></th>
-        <th><div class="tiles ylast"></div></th>
-        <th><div class="tiles y"></div></th>
-    </tr>
-    <tr>
-        <th><div class="tiles y"></div></th>
-        <th><div class="tiles y"></div></th>
-        <th><div class="tiles y"></div></th>
-    </tr>
-</table>
-</div>
-</th>
-</tr>
-<tr>
-            <th align="left">
-    <div class="container" player-id="P4">
-        
-    </div>
-            </th>
-            <th align="center">
-                <div class="displayName" id="P4">
-                <h5 id="nameDisplay"></h5>
-                </div>
-                <div class="displayName" id="P3">
-                <h5 id="nameDisplay"></h5>
-                </div>
-            </th>
-            <th align="right">
-    <div class="container" player-id="P3">
-        
-   </div>          
-            </th>
-</tr>
-</table>
-<script src="./main.js" type="module"></script>
-</body>
+    <script src="./main.js" type="module"></script>
+  </body>
 </html>
