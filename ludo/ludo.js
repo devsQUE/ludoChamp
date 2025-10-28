@@ -203,8 +203,19 @@ export class Ludo {
     } */
 
     resetGame() {
-        console.log('reset game');
-        PLAYERS.splice(0, 4, "P1", "P2", "P3", "P4");
+        const numberOfPlayers = sessionStorage.getItem('numberOfPlayers');
+        if (numberOfPlayers == '2') {
+            console.log('reset game');
+            PLAYERS.splice(0, 2, "P1", "P3");
+        } else if (numberOfPlayers == '3') {
+            console.log('reset game');
+            PLAYERS.splice(0, 3, "P1", "P2", "P3");
+        } else {
+            console.log('reset game');
+            PLAYERS.splice(0, 4, "P1", "P2", "P3", "P4");
+        }
+
+
         WIN.splice(0, 3, "golden(crown).svg", "silver(crown).svg", "bronze(crown).svg");
         this.currentPositions = structuredClone(BASE_POSITIONS);
 
