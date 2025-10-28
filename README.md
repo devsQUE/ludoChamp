@@ -1,7 +1,7 @@
 # LUDO Champ
 
 <p align="center">
-  <img src='images/logo.png' width='300'>
+  <img src='images/icon.png' width='300'>
 </p>
 
 
